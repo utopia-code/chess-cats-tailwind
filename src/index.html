@@ -4,10 +4,42 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
+		<meta name="theme-color" content="#000000" />
+		<link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-		<title>UOC Boilerplate</title>
+		<title>Chess Cats Club</title>
 	</head>
-	<body>
+	<body class="layout-home">
+
+		<!-- Link GitHub https://github.com/utopia-code/chess-cats-tailwind
+		Link Netlify https://chess-cats-tailwind.netlify.app/ -->
+
+		<include src="./views/header.html"></include>
+
+		<div class="wrapper">
+			<div class="poster">
+				<h1 class="poster__title">Chess Cats</h1>
+				<div class="poster__subtitle">Community</div>
+				<div class="poster__desc">
+					<p>¡Inscríbete! Sólo por participar, te llevas una camiseta del club. Además podrás ganar hasta 200€ y suscripciones anuales a nuestro <a href="index.html" class="link-dark">club</a></p>
+				</div>
+				<div class="poster__date">21/23.07.2023 Valencia<br>Tinglado 2</div>
+				<div class="poster__link"><a class="no-animation" href="article.html">Leer más</a></div>
+				<div class="poster__img">
+				<picture>
+					<source type="image/avif" srcset="./assets/images/chess-cats-v1.jpg?as=avif">
+					<source type="image/webp" srcset="./assets/images/chess-cats-v1.jpg?as=webp">
+					<source type="image/jpg" srcset="./assets/images/chess-cats-v1.jpg">
+					<img src="./assets/images/chess-cats-v1.jpg" alt="Póster concurso 2023 Chess Cat Club">
+				</picture>
+				</div>
+				<div class="poster__square poster__square--1"></div>
+				<div class="poster__square poster__square--2"></div>
+				<div class="poster__square poster__square--3"></div>
+				<div class="poster__square poster__square--4"></div>
+				<div class="poster__square poster__square--5"></div>
+			</div>
+		</div>
 		
 		<include src="./views/footer.html"></include>
 		<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
