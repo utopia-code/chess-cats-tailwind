@@ -15,8 +15,9 @@
  * see commented examples below
  */
 
-/* @import "some-node-module"; */
-/* @import "@some-company/some-node-module"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
 
