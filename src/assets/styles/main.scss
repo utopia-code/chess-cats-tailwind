@@ -7,6 +7,7 @@
  * Import variables
  */
 
+ @import "settings/fonts";
 
 
 /**
@@ -16,8 +17,70 @@
  */
 
 @tailwind base;
+
+@layer base {
+    :root {
+        --color-primary: 6 165 171;
+        --color-secondary: 209 223 25;
+        --size-title-h1: calc(1.3rem + 4vw);
+        --size-title-h2: calc(.95rem + 2.34vw);
+        --size-title-h3: calc(.85rem + 1.86vw);
+        --shadow-link: inset 0 -2px 0 rgba(209,223,25,1);
+        --shadow-link-hover: inset 0 -1.4em 0 rgba(209,223,25,.5);;
+        --select-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2306a5ab' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        --checkbox-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    }
+
+    html {
+        @apply box-border text-gray-800;
+    }
+
+    h1 {
+        @apply font-serif text-h1 text-white leading-none;
+    }
+
+    h2 {
+        @apply font-highlight text-h2 lg:text-4xl leading-none mb-4;
+    }
+
+    h3 {
+        @apply font-highlight text-h3 lg:text-3xl mb-4;
+    }
+
+    a {
+        @apply font-medium text-gray-50;
+    }
+
+    a:not(.nav__link, .no-animation, .btn) {
+        @apply shadow-link hover:shadow-link-hover text-gray-800 transition duration-150 ease-in-out;
+    }
+
+    img {
+        @apply max-w-full grayscale;
+    }
+}
+
 @tailwind components;
+
+@layer components {
+    .container {
+        @apply max-w-full lg:max-w-[1320px];
+    }
+
+    @import "components/layout";
+}
+
 @tailwind utilities;
+
+@layer utilities {
+    .nav__link--active {
+        @apply bg-secondary text-gray-800;
+    }
+
+    .accordion__item--open .accordion__button {
+        @apply text-gray-800 bg-secondary after:-rotate-90;
+    }
+}
 
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
 
