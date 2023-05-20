@@ -1,12 +1,13 @@
 <footer>
-    <div class="nav nav--footer">
+    <div class="bg-black flex justify-between px-4 nav nav--footer">
 
-        <div class="nav__logo">
-            <a class="nav__link nav__link--home" href="index.html">
+        <div class="sm:my-2 nav__logo">
+            <a class="group nav__link nav__link--home" href="index.html">
                 
                 <svg version="1.1" id="logo" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        width="60" height="60" viewBox="0 0 560.978 560.978" xml:space="preserve" class="nav__link--logo">
-                        <rect x="82.152" y="82.151" transform="matrix(-0.71 0.7042 -0.7042 -0.71 677.1557 282.1147)" fill="#FFFFFF" width="396.673" height="396.674"/>
+                        width="60" height="60" viewBox="0 0 560.978 560.978" xml:space="preserve" class="w-10 sm:w-14 nav__link--logo">
+                        <rect x="82.152" y="82.151" transform="matrix(-0.71 0.7042 -0.7042 -0.71 677.1557 282.1147)" fill="#FFFFFF" width="396.673" height="396.674"
+                            class="group-hover:fill-primary transition duration-150 ease-out hover:ease-in"/>
                         <path id="logo" d="M426.629,334.842c-0.42-0.291-3.395-0.938-6.662-1.487c-3.234-0.518-5.951-1.035-6.049-1.134
                             c-0.096-0.063,0.291-1.519,0.842-3.169c2.749-8.41,3.396-12.744,3.396-22.739c0-6.922-0.098-8.701-0.712-12.259
                             c-0.776-4.496-1.553-7.828-2.846-12.065l-0.81-2.684l1.293-5.888c5.822-26.523,9.381-47.483,11.224-66.567
@@ -34,16 +35,44 @@
             </a>
         </div>
 
-        <ul class="nav__menu">
-            <li class="nav__menu-item"><a class="nav__link js-nav__link" href="index.html"><span>Home</span></a></li>
-            <li class="nav__menu-item"><a class="nav__link js-nav__link" href="index.html"><span>Club</span></a></li>
-            <li class="nav__menu-item"><a class="nav__link js-nav__link" href="article.html"><span>Torneo</span></a></li>
-            <li class="nav__menu-item"><a class="nav__link js-nav__link" href="index.html"><span>Cursos</span></a></li>
+        <ul class="flex nav__menu">
+            <li class="flex uppercase text-sm xs:text-lg sm:text-2xl nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 hover:bg-secondary hover:text-gray-800 transition duration-150 ease-out hover:ease-in nav__link js-nav__link" href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="flex uppercase text-sm xs:text-lg sm:text-2xl nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 hover:bg-secondary hover:text-gray-800 transition duration-150 ease-out hover:ease-in nav__link js-nav__link" href="#">
+                    <span>Club</span>
+                </a>
+            </li>
+            <li class="flex uppercase text-sm xs:text-lg sm:text-2xl nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 hover:bg-secondary hover:text-gray-800 transition duration-150 ease-out hover:ease-in nav__link js-nav__link" href="article.html">
+                    <span>Torneo</span>
+                </a>
+            </li>
+            <li class="flex uppercase text-sm xs:text-lg sm:text-2xl nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 hover:bg-secondary hover:text-gray-800 transition duration-150 ease-out hover:ease-in nav__link js-nav__link" href="#">
+                    <span>Cursos</span>
+                </a>
+            </li>
         </ul>
-        <ul class="nav__menu">
-            <li class="nav__menu-item"><a class="nav__link" href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
-            <li class="nav__menu-item"><a class="nav__link" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li class="nav__menu-item"><a class="nav__link" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <ul class="flex nav__menu">
+            <li class="flex nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 nav__link" href="#">
+                    <i class="text-lg sm:text-2xl hover:text-secondary transition duration-150 ease-out hover:ease-in fa-brands fa-google-plus-g"></i>
+                </a>
+            </li>
+            <li class="flex nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 nav__link" href="#">
+                    <i class="text-lg sm:text-2xl hover:text-secondary transition duration-150 ease-out hover:ease-in fa-brands fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="flex nav__menu-item">
+                <a class="flex items-center px-1.5 sm:px-2.5 nav__link" href="#">
+                    <i class="text-lg sm:text-2xl hover:text-secondary transition duration-150 ease-out hover:ease-in fa-brands fa-twitter"></i>
+                </a>
+            </li>
         </ul>
     </div>
 </footer>
