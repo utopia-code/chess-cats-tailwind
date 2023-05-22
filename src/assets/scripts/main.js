@@ -29,31 +29,35 @@
 
 +( function() {
     /* visible body click event button accordion */
-    const accordion = document.getElementById('accordion');
-    const items = accordion.querySelectorAll('.accordion__item');
 
-    items.forEach((item) => {
-        const header = item.querySelector('.accordion__header');
-        
-        header.addEventListener('click', (e) => {
-            const opened_item = accordion.querySelector('.accordion__item--open');
-            toggle_item(item); 
+    if (document.body.classList.contains('accordion')) {
+        const accordion = document.getElementById('accordion');
+        const items = accordion.querySelectorAll('.accordion__item');
+
+        items.forEach((item) => {
+            const header = item.querySelector('.accordion__header');
             
-            if (opened_item && opened_item !== item) {
-                toggle_item(opened_item);
-            }
-        });
-    });
-
-    const toggle_item = (item) => {
-        const body = item.querySelector('.accordion__body');
+            header.addEventListener('click', (e) => {
+                const opened_item = accordion.querySelector('.accordion__item--open');
+                toggle_item(item); 
                 
-        if (item.classList.contains('accordion__item--open')) {
-            body.removeAttribute('style');
-            item.classList.remove('accordion__item--open');
-        } else {
-            body.style.height = body.scrollHeight + 'px';
-            item.classList.add('accordion__item--open');
+                if (opened_item && opened_item !== item) {
+                    toggle_item(opened_item);
+                }
+            });
+        });
+
+        const toggle_item = (item) => {
+            const body = item.querySelector('.accordion__body');
+                    
+            if (item.classList.contains('accordion__item--open')) {
+                body.removeAttribute('style');
+                item.classList.remove('accordion__item--open');
+            } else {
+                body.style.height = body.scrollHeight + 'px';
+                item.classList.add('accordion__item--open');
+            }
         }
     }
+    
 } )();
