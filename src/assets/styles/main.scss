@@ -25,8 +25,10 @@
         --size-title-h1: calc(1.3rem + 4vw);
         --size-title-h2: calc(.95rem + 2.34vw);
         --size-title-h3: calc(.85rem + 1.86vw);
+        --size-title-special: calc(1.85rem + 10vw);
+        --size-title-special-xs: calc(1.85rem + 5vw);
         --shadow-link: inset 0 -2px 0 rgba(209,223,25,1);
-        --shadow-link-hover: inset 0 -1.4em 0 rgba(209,223,25,.5);;
+        --shadow-link-hover: inset 0 -1.4em 0 rgba(209,223,25,.9);;
         --select-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2306a5ab' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
         --checkbox-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
     }
@@ -36,7 +38,7 @@
     }
 
     h1 {
-        @apply font-serif text-h1 text-white leading-none;
+        @apply font-serif text-h1 text-white text-center leading-none;
     }
 
     h2 {
@@ -51,8 +53,11 @@
         @apply font-medium text-gray-50;
     }
 
-    a:not(.nav__link, .no-animation, .btn) {
+    a:not(.nav__link, .link-block) {
         @apply shadow-link hover:shadow-link-hover text-gray-800 transition duration-150 ease-in-out;
+        &.link-dark {
+            @apply text-gray-50 hover:text-gray-800;
+        }
     }
 
     img {
@@ -67,14 +72,37 @@
         @apply max-w-full lg:max-w-[1320px];
     }
 
+    @import "components/poster";
     @import "components/layout";
 }
 
 @tailwind utilities;
 
 @layer utilities {
+    .link-block {
+        @apply w-full h-full 
+        flex items-center 
+        justify-center 
+        before:block 
+        before:absolute 
+        before:inset-0
+        before:-z-1
+        before:w-0 
+        before:h-full 
+        before:bg-secondary 
+        before:transition-width 
+        before:duration-150 
+        before:ease-in-out 
+        hover:text-gray-800 
+        hover:before:w-full;
+    }
+
     .nav__link--active {
         @apply bg-secondary text-gray-800;
+    }
+
+    .layout-home  .nav__link--active  {
+        @apply text-secondary bg-transparent;
     }
 
     .accordion__item--open .accordion__button {
