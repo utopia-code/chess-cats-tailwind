@@ -9,35 +9,83 @@
 		<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
 		<title>Chess Cats Club</title>
 	</head>
-	<body class="layout-home">
+	<body class="sm:min-h-screen sm:relative sm:overflow-hidden sm:grid sm:grid-rows-full-height layout-home">
 
 		<!-- Link GitHub https://github.com/utopia-code/chess-cats-tailwind
 		Link Netlify https://chess-cats-tailwind.netlify.app/ -->
 
 		<include src="./views/header.html"></include>
 
-		<div class="wrapper">
-			<div class="poster">
-				<h1 class="text-primary poster__title">Chess Cats</h1>
-				<div class="poster__subtitle">Community</div>
-				<div class="poster__desc">
-					<p>¡Inscríbete! Sólo por participar, te llevas una camiseta del club. Además podrás ganar hasta 200€ y suscripciones anuales a nuestro <a href="index.html" class="link-dark">club</a></p>
+		<div class="sm:absolute sm:row-span-full wrapper">
+
+			<div class="relative w-full 
+					grid grid-rows-poster grid-cols-poster 
+					sm:grid-rows-sm-poster sm:grid-cols-sm-poster 
+					xl:grid-rows-xl-poster xl:grid-cols-xl-poster 
+					bg-black sm:bg-transparent 
+					poster">
+
+				<h1 class="text-primary 
+					row-start-1 row-end-2 
+					sm:row-start-2 sm:row-end-4 
+					col-span-full 
+					text-xs-special sm:text-special 
+					uppercase m-0 z-1 
+					poster__title">Chess Cats</h1>
+
+				<div class="row-start-3 row-end-4 
+					sm:row-start-5 sm:row-end-7 
+					col-start-1 col-end-2 
+					text-xl xs:text-3xl
+					p-0 rotate-180 [writing-mode:vertical-lr] 
+					poster__subtitle">Community</div>
+
+				<div class="row-start-3 row-end-4 
+					col-start-2 col-end-[-1] 
+					sm:row-start-6 sm:row-span-2 
+					sm:col-start-6 sm:col-span-2 
+					poster__desc">
+					<p>¡Inscríbete! Sólo por participar, te llevas una camiseta del club. Además podrás ganar hasta 200€ y suscripciones anuales a nuestro 
+						<a href="index.html" class="text-white link-dark">club</a>
+					</p>
 				</div>
-				<div class="poster__date">21/23.07.2023 Valencia<br>Tinglado 2</div>
-				<div class="poster__link"><a class="no-animation" href="article.html">Leer más</a></div>
-				<div class="poster__img">
-				<picture>
-					<source type="image/avif" srcset="./assets/images/chess-cats-v1.jpg?as=avif">
-					<source type="image/webp" srcset="./assets/images/chess-cats-v1.jpg?as=webp">
-					<source type="image/jpg" srcset="./assets/images/chess-cats-v1.jpg">
-					<img src="./assets/images/chess-cats-v1.jpg" alt="Póster concurso 2023 Chess Cat Club">
-				</picture>
+
+				<div class="row-start-4 row-end-5 
+					col-start-1 col-end-3 
+					sm:row-start-5 sm:row-end-6 
+					sm:col-start-7 sm:col-end-auto 
+					bg-white text-black 
+					poster__date">21/23.07.2023 Valencia<br>Tinglado 2</div>
+
+				<div class="row-start-4 row-end-5 
+					col-start-3 col-end-[-1] 
+					sm:row-start-8 sm:row-end-9 
+					sm:col-start-5 sm:col-end-auto 
+					relative z-1 p-0 
+					poster__link">
+					<a class="link-block" href="article.html">Leer más</a>
 				</div>
-				<div class="poster__square poster__square--1"></div>
-				<div class="poster__square poster__square--2"></div>
-				<div class="poster__square poster__square--3"></div>
-				<div class="poster__square poster__square--4"></div>
-				<div class="poster__square poster__square--5"></div>
+
+				<div class="relative 
+					sm:absolute sm:-z-1 
+					row-start-1 row-end-3 
+					sm:row-span-full col-span-full 
+					poster__img">
+					<picture>
+						<source type="image/avif" srcset="./assets/images/chess-cats-v1.jpg?as=avif">
+						<source type="image/webp" srcset="./assets/images/chess-cats-v1.jpg?as=webp">
+						<source type="image/jpg" srcset="./assets/images/chess-cats-v1.jpg">
+						<img src="./assets/images/chess-cats-v1.jpg" 
+							alt="Póster concurso 2023 Chess Cat Club" 
+							class="block min-h-full w-screen max-w-none mx-auto object-cover">
+					</picture>
+				</div>
+
+				<div class="row-start-2 row-end-3 col-start-1 col-end-2 poster__square poster__square--1"></div>
+				<div class="row-start-3 row-end-4 col-start-2 col-end-3 poster__square poster__square--2"></div>
+				<div class="row-start-3 row-end-4 col-start-5 col-end-auto poster__square poster__square--3"></div>
+				<div class="row-start-3 row-end-4 col-start-7 col-end-auto poster__square poster__square--4"></div>
+				<div class="row-start-4 row-end-5 col-start-6 col-end-auto poster__square poster__square--5"></div>
 			</div>
 		</div>
 		

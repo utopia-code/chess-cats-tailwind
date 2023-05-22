@@ -1,0 +1,53 @@
+.layout-home {
+
+    header, footer {
+        @apply sm:relative sm:z-50;
+    }
+
+    footer {
+        @apply sm:row-start-3 sm:row-end-4;
+    }
+    
+    .wrapper{
+        @apply sm:min-w-full sm:h-full;
+    } 
+
+    .nav {
+        @apply bg-black sm:bg-transparent;
+    }
+
+    .nav__link {
+        @apply h-auto hover:text-secondary hover:bg-transparent;
+    }
+    
+}
+
+.poster, 
+.poster__img{
+    @apply sm:min-w-full sm:h-full;
+}
+
+.poster__title, 
+.poster__subtitle, 
+.poster__desc, 
+.poster__link,
+.poster__date {
+    @apply flex items-center justify-center;
+}
+
+.poster__subtitle, 
+.poster__desc, 
+.poster__link, 
+.poster__date {
+    @apply w-auto min-h-0 bg-black text-gray-50 p-5 border border-white sm:border-0;
+}
+
+.poster__subtitle, 
+.poster__link, 
+.poster__date {
+    @apply font-highlight uppercase;
+}
+
+.poster__square {
+    @apply relative block bg-white -z-1;
+}
