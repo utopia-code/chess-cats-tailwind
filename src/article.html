@@ -13,7 +13,21 @@
 
 		<include src="./views/header.html"></include>
 
-		<section class="h-60 xs:h-72 sm:h-450 md:h-550 lg:h-600 xl:h-700 overflow-hidden flex items-center relative after:block after:absolute after:inset-0 after:bg-primary/20   page-title">
+		<section class="h-60 
+				xs:h-72 
+				sm:h-450
+				md:h-550 
+				lg:h-600 
+				xl:h-700 
+				overflow-hidden 
+				flex 
+				items-center 
+				relative 
+				after:block 
+				after:absolute 
+				after:inset-0 
+				after:bg-primary/20 
+				page-title">
 			<picture class="object-cover w-full page-title__img">
 				<source type="image/avif" srcset="./assets/images/pexels-nothing-ahead-4576330.jpg?as=avif">
 				<source type="image/webp" srcset="./assets/images/pexels-nothing-ahead-4576330.jpg?as=webp">
@@ -27,7 +41,7 @@
 		</section>
 		
 		<article class="my-12 sm:my-20 lg:my-24">
-			<section class="container--wrap layout-grid">
+			<section class="container grid grid-cols-layout md:grid-cols-md-layout gap-x-12 layout-grid container--wrap">
 
 				<div class="grid__center">
 					<h3>Torneo de Verano Chess Cats Club</h3>
@@ -143,7 +157,7 @@
 					<p>Te resumimos a continuación las principales reglas que se emplean en los torneos de ajedrez, y que enseñamos a los alumnos en clase.</p>
 				</div>
 
-				<div class="col-start-1 col-span-4  md:col-start-2 md:col-span-1 mb-8 accordion" id="accordion">
+				<div class="col-start-1 col-span-4 md:col-start-2 md:col-span-1 mb-8 accordion" id="accordion">
 					<include src="./views/accordion.html"></include>
 				</div>
 
@@ -156,7 +170,7 @@
 					</p>
 				</div>
 
-				<div class="col-start-1 col-span-4  md:col-start-2 md:col-span-1 mb-8 form">
+				<div class="col-start-1 col-span-4 md:col-start-2 md:col-span-1 mb-8 form">
 					<include src="./views/form.html"></include>
 				</div>
 

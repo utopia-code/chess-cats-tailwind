@@ -7,12 +7,8 @@
     footer {
         @apply sm:row-start-3 sm:row-end-4;
     }
-    
-    .wrapper{
-        @apply sm:min-w-full sm:h-full;
-    } 
 
-    .nav {
+    nav {
         @apply bg-black sm:bg-transparent;
     }
 

@@ -23,7 +23,19 @@
     <div class="border border-gray-800/10 accordion__item">
         <div class="accordion__header">
             <button 
-                class="w-full p-3 text-white bg-black flex justify-between relative after:content-['\276F'] after:rotate-90 after:transition duration-150 ease-in accordion__button" 
+                class="w-full 
+                    p-3 
+                    text-white 
+                    bg-black 
+                    flex 
+                    justify-between 
+                    relative 
+                    after:content-['\276F'] 
+                    after:rotate-90 
+                    after:transition 
+                    duration-150 
+                    ease-in 
+                    accordion__button" 
                 type="button"
                 data-bs-toggle="collapse" 
                 data-bs-target="#{{ item[0] }}" 
@@ -32,7 +44,9 @@
                 {{ item[1] }}
             </button>
         </div>
-        <div id="{{ item[0] }}" class="h-0 overflow-hidden transition-height duration-300 ease-in-out accordion__body" data-bs-parent="#accordion">
+        <div id="{{ item[0] }}" 
+            class="h-0 overflow-hidden transition-height duration-300 ease-in-out accordion__body" 
+            data-bs-parent="#accordion">
             <div class="p-3 accordion__content">
                 {{ item[2] }}
             </div>

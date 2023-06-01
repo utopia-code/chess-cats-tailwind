@@ -1,13 +1,20 @@
-.layout-grid {
-    @apply container grid grid-cols-layout md:grid-cols-md-layout gap-x-12;
-}
-
 .grid__center {
     @apply col-start-2 col-span-3 md:col-start-2 md:col-span-1 mb-8;
 }
 
 .grid__aside {
-    @apply col-start-1 col-span-4 xs:col-start-3 xs:col-span-2 md:col-start-3 md:col-span-1 self-start mb-8 md:mb-0 p-4 border-l-4 border-l-secondary bg-secondary/20;
+    @apply col-start-1 
+    col-span-4 
+    xs:col-start-3 
+    xs:col-span-2 
+    md:col-start-3 
+    md:col-span-1 
+    self-start 
+    mb-8 md:mb-0 
+    p-4 
+    border-l-4 
+    border-l-secondary 
+    bg-secondary/20;
 }
 
 .grid__icon {
