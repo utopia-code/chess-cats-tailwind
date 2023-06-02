@@ -8,8 +8,8 @@
  * Import variables
  */
 
- @import "settings/fonts";
-
+@import "settings/fonts";
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 
 /**
  * Import npm dependencies
@@ -92,8 +92,6 @@
         @apply text-gray-800 bg-secondary after:-rotate-90;
     }
 }
-
-@import "npm:@fortawesome/fontawesome-free/css/all.css";
 
 /**
  * Import layouts
