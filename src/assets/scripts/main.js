@@ -29,8 +29,7 @@
 
 
 +( function() {
-    /* visible body click event button accordion */
-
+    /* if visible accordion class, click event button accordion */
     const div = document.querySelectorAll('div');
 
     div.forEach(function(item) {
